@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width=500 height=500></canvas>
+<script>
+    let canvas = document.querySelector('canvas')
+    let ctx = canvas.getContext('2d')
+
+    class Rectangle {
+        // Width = 50;
+        // Height = 30;
+        // cOlor = red;
+        // x= 10
+        // y = 30
+
+        constructor(color, x,y,height,width) {
+            this.color=color;
+            this.x=x;
+            this.y=y;
+            this.height = height;
+            this.width = width;
+        }
+
+        draw() {
+            ctx.fillStyle = this.color
+            ctx.fillRect(this.x,this.y,this.height, this.width)
+        }
+
+    }
+    // class Circle{
+    //     // radius=100
+    //     // x=10
+    //     // y=10
+    //     // color=f0000
+    //     constructor(x,y,radius,color) {
+    //         this.x = x;
+    //         this.y = y;
+    //         this.radius = radius;
+    //         this.color = color;
+    //     }
+    //     draw(){
+    //         ctx.fillStyle = this.color
+    //         ctx.arc(this.x,this.y,this.radius,0,Math.PI * 2)
+    //     }
+    // }
+    // let circle = new Circle(10,10,100,'blue')
+    let rectangle = new Rectangle('red',10,30,50,30)
+    rectangle.draw()
+    // circle.draw()
+</script>
+</body>
+</html>
